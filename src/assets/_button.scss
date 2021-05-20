@@ -1,0 +1,77 @@
+@import "../assets/_variables.scss";
+
+.btnPrimary {
+    color: white;
+    background-color: $btn-primary;
+    padding: 1rem;
+    border-radius: 7px;
+    border: 2px solid white;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #fc9c9f, #b46cdb);
+        border-radius: 5px;
+        transform: scaleX(0);
+        transform-origin: center right;
+        transition: transform .5s ease, -webkit-transform .5s ease;
+    }
+
+    &:hover {
+        &::before {
+            transform-origin: center left;
+            transform: scaleX(1);
+        }
+    }
+
+    .join {
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+    }
+}
+
+.btnSecondary {
+    color: $btn-primary;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 7px;
+    border: 1px solid $btn-primary;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #fc9c9f, #b46cdb);
+        border-radius: 5px;
+        transform: scaleX(0);
+        transform-origin: center right;
+        transition: transform .5s ease, -webkit-transform .5s ease;
+    }
+
+    &:hover {
+        &::before {
+            transform-origin: center left;
+            transform: scaleX(1);
+        }
+    }
+
+    .join {
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+    }
+}
